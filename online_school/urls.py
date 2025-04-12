@@ -24,6 +24,7 @@ from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from django.urls import re_path
 from rest_framework import permissions
+from django.views.generic import RedirectView
 schema_view = get_schema_view(
    openapi.Info(
       title="Online School API",
@@ -45,6 +46,7 @@ urlpatterns = [
     path('api/v1/',include('api.urls')),
     path('api/v1/',include('enrollment.urls')),
      path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
+     path('', RedirectView.as_view(url='/api/v1/courses/', permanent=False)),
    
 ]+ debug_toolbar_urls()
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

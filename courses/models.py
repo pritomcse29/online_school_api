@@ -2,7 +2,7 @@ from django.db import models
 from django.conf import settings
 from django.core.validators import MinValueValidator, MaxValueValidator
 from users.models import User
-
+from cloudinary.models import CloudinaryField
 # Create your models here.
 
 class Department(models.Model):
@@ -33,7 +33,8 @@ class Course(models.Model):
     price = models.DecimalField(max_digits=10,decimal_places=2)
     duration_in_hours = models.PositiveIntegerField()
     is_active = models.BooleanField(default=True)
-    thumbnail = models.ImageField(upload_to="courses/images/")
+    thumbnail = CloudinaryField('image')
+    # thumbnail = models.ImageField(upload_to="courses/images/")
     level = models.CharField(max_length=20,default='beginner',choices=levels)
 
     class Meta:
