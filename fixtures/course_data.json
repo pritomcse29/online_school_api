@@ -1,0 +1,67 @@
+[
+  {
+    "model": "users.user",
+    "pk": 1,
+    "fields": {
+      "email": "john.doe@example.com",
+      "password": "pbkdf2_sha256$10000$XXXXXXXXXXXXXXXXXXXX",
+      "first_name": "John",
+      "last_name": "Doe",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false
+    }
+  },
+  {
+    "model": "courses.department",
+    "pk": 1,
+    "fields": {
+      "name": "Computer Science",
+      "description": "Courses related to computer science and programming."
+    }
+  },
+  {
+    "model": "courses.department",
+    "pk": 2,
+    "fields": {
+      "name": "Mathematics",
+      "description": "Courses related to mathematics and its applications."
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 1,
+    "fields": {
+      "name": "Intro to Programming",
+      "description": "Learn the basics of programming with Python.",
+      "available_seat": 30,
+      "department": 1,
+      "created_at": "2025-04-09T10:00:00Z",
+      "updated_at": "2025-04-09T10:00:00Z",
+      "instructor": 1,
+      "price": "100.00",
+      "duration_in_hours": 40,
+      "is_active": true,
+      "thumbnail": "courses/images/intro_to_programming.jpg",
+      "level": "beginner"
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 2,
+    "fields": {
+      "name": "Advanced Algorithms",
+      "description": "Dive deep into algorithms and data structures.",
+      "available_seat": 25,
+      "department": 1,
+      "created_at": "2025-04-09T12:00:00Z",
+      "updated_at": "2025-04-09T12:00:00Z",
+      "instructor": 1,
+      "price": "200.00",
+      "duration_in_hours": 60,
+      "is_active": true,
+      "thumbnail": "courses/images/advanced_algorithms.jpg",
+      "level": "advanced"
+    }
+  }
+]
