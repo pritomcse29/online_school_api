@@ -61,7 +61,7 @@ MIDDLEWARE = [
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:5173',
 ]
-
+CORS_ALLOW_ALL_ORIGINS = True
 INTERNAL_IPS = [
    
     "127.0.0.1",
